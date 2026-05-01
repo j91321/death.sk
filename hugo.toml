@@ -1,0 +1,7 @@
+theme = 'hugo-book'
+locale = 'en-us'
+title = 'DEATH.sk'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
