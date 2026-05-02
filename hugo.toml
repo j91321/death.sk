@@ -1,6 +1,7 @@
 theme = 'hugo-book'
 locale = 'en-us'
 title = 'DEATH.sk'
+baseURL = 'https://death.sk/'
 
 [caches]
   [caches.images]
