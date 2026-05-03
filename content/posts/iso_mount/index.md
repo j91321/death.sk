@@ -6,7 +6,7 @@ categories:
 tags:
 - EDR
 - detection engineering
-image: "images/velociraptor_monitoring.png"
+BookPostThumbnail: "images/velociraptor_monitoring.png"
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*

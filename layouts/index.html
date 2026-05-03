@@ -1,44 +1,39 @@
 {{ define "main" }}
-
-<article class="markdown">
-
-  <h1>{{ .Title }}</h1>
-  <div>{{ .Content }}</div>
-
-  <h2>Latest Posts</h2>
-
-  {{ $pages := where site.RegularPages "Section" "posts" }}
-
-  <div class="post-grid">
-
-    {{ range first 6 $pages }}
-      <div class="post-card">
-
-        <div class="post-card-content">
-          <h3>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h3>
-
-          <p class="meta">
-            {{ .Date.Format "Jan 2, 2006" }}
-          </p>
-
-          {{ with .Params.image }}
-            <a href="{{ $.RelPermalink }}">
-              <img src="{{ . }}" alt="{{ $.Title }}" class="post-thumb">
-            </a>
-          {{ end }}
-
-          <p>{{ .Summary }}</p>
-
-          <a href="{{ .RelPermalink }}">Read more →</a>
+  {{ range sort .Paginator.Pages }}
+  <article class="book-post markdown">
+    <h2>
+      <a href="{{ .RelPermalink }}">{{ partial "docs/title" . }}</a>
+    </h2>
+    <div class="book-post-container flex gap">
+      <div>
+        {{ partial "docs/post-meta" . }}
+        <div class="book-post-content markdown-inner">
+          {{- $thumbnail := default "thumbnail.*" .Params.BookPostThumbnail -}}
+          {{- with or (.Resources.GetMatch $thumbnail) (resources.GetMatch $thumbnail) -}}
+          <div class="post-thumb">
+            <img src="{{ .RelPermalink }}" alt="{{ partial "docs/text/i18n" "Thumbnail" }}" />
+          </div>
+          {{- end -}}
+          {{- .Summary -}}
         </div>
-
       </div>
-    {{ end }}
+    </div>
+  </article>
+  {{ end }}
+{{ end }}
 
+{{ define "toc-container" }}
+<aside class="book-toc">
+  <div class="book-toc-content">
+    {{ template "toc" . }}
   </div>
+</aside>
+{{ end }}
 
-</article>
+{{ define "toc" }}
+  {{ partial "docs/taxonomy" . }}
+{{ end }}
 
+{{ define "footer" }}
+  {{ partial "docs/pagination.html" . }}
 {{ end }}
