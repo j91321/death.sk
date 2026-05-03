@@ -3,6 +3,10 @@ locale = 'en-us'
 title = 'DEATH.sk'
 baseURL = 'https://death.sk/'
 
+[params]
+  BookTheme = 'auto'
+
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'

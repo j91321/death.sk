@@ -1,11 +1,13 @@
 ---
 title: "Understanding EDR Telemetry: Virtual Disk Mount"
 date: 2026-04-12T15:00:48+02:00
+author: j91321
 categories:
 - EDR Telemetry
 tags:
 - EDR
 - detection engineering
+thumbnail: "images/protect_advanced_search.png"
 BookPostThumbnail: "images/velociraptor_monitoring.png"
 # bookComments: false
 # bookSearchExclude: false
