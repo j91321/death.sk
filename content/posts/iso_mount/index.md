@@ -7,8 +7,8 @@ categories:
 tags:
 - EDR
 - detection engineering
-thumbnail: "images/protect_advanced_search.png"
-BookPostThumbnail: "images/velociraptor_monitoring.png"
+images: ["images/velociraptor_monitoring.png"] # OpenGraph setting
+bookPostThumbnail: "images/velociraptor_monitoring.png"
 # bookComments: false
 # bookSearchExclude: false
 # bookPostThumbnail: thumbnail.*

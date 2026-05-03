@@ -5,7 +5,21 @@ baseURL = 'https://death.sk/'
 
 [params]
   BookTheme = 'auto'
+  BookCustomCSS = ["css/custom.css"]
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/j91321"
+    icon = "github"
 
+  [[params.social]]
+    name = "Mastodon"
+    url = "https://infosec.exchange/@j91321"
+    icon = "mastodon"
+
+  [[params.social]]
+    name = "Bluesky"
+    url = "https://bsky.app/profile/j91321.bsky.social"
+    icon = "bluesky"
 
 [caches]
   [caches.images]
