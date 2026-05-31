@@ -7,6 +7,7 @@ categories:
 tags:
 - EDR
 - detection engineering
+- Windows
 images: ["images/velociraptor_monitoring.png"] # OpenGraph setting
 bookPostThumbnail: "images/velociraptor_monitoring.png"
 # bookComments: false
