@@ -1,10 +1,11 @@
 <div class="book-footer-social">
   {{ range .Site.Params.social }}
-    <a 
-      {{ if eq .name "Mastodon" }}rel="me"{{ end }} 
-      href="{{ .url }}" 
+    <a
+      href="{{ .url }}"
       target="_blank" 
-      title="{{ .name }}">
+      rel="me noopener"
+      title="{{ .name }}"
+      aria-label="{{ .name }}">
       {{ partial (printf "icons/%s.svg" .icon) . }}
     </a>
   {{ end }}
