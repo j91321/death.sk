@@ -5,7 +5,6 @@ baseURL = 'https://death.sk/'
 
 [params]
   BookTheme = 'auto'
-  BookCustomCSS = ["css/custom.css"]
   [[params.social]]
     name = "GitHub"
     url = "https://github.com/j91321"
