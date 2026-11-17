@@ -2,6 +2,38 @@ theme = 'hugo-book'
 locale = 'en-us'
 title = 'DEATH.sk'
 baseURL = 'https://death.sk/'
+enableGitInfo = true 
+
+[[menu.before]]
+  name = "About"
+  params = { BookIcon = "about" }
+  url = "/about/"
+  weight = 1
+[[menu.before]]
+  name = "Posts"
+  params = { BookIcon = "posts" }
+  url = "/posts/"
+  weight = 2
+[[menu.after]]
+  name = "Mastodon"
+  params = { BookIcon = "mastodon" }
+  url = "https://infosec.exchange/@j91321"
+  weight = 7
+[[menu.after]]
+  name = "Bluesky"
+  params = { BookIcon = "bluesky" }
+  url = "https://bsky.app/profile/j91321.bsky.social"
+  weight = 8
+[[menu.after]]
+  name = "GitHub"
+  params = { BookIcon = "github" }
+  url = "https://github.com/j91321"
+  weight = 9
+[[menu.after]]
+  name = "RSS"
+  params = { BookIcon = "rss" }
+  url = "/index.xml"
+  weight = 10
 
 [params]
   BookTheme = 'auto'
